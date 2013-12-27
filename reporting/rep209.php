@@ -221,8 +221,31 @@ function print_po()
 			$rep->End($email);
 		}
 	}
+	
+	//testing menggunakan writeHTML();
+	$rep->addPage();
+	$html_test = '<table width="100%"  border="1">
+			       <thead>
+			        <tr>
+			          <th>Iman</th>
+			          <th>Islam</th>
+			          <th>Ihsan</th>  
+			        </tr>
+			       </thead>
+			       <tbody>
+			        <tr>
+			          <td>Meniti</td>
+			          <td>Tingkatan</td>
+			          <td>Jiwa</td> 
+			        </tr>
+			       </tbody>
+			      <table>';
+	
+    $rep->writeHTML($html_test);
+      	
 	if ($email == 0)
 		$rep->End();
+	
 }
 
 ?>
